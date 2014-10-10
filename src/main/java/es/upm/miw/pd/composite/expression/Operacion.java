@@ -11,6 +11,7 @@ public abstract class Operacion extends Expresion {
 	}
 	
 	public abstract int operar();
+	public abstract String getOperador();
 
 	public Expresion getOperando1() {
 		return operando1;
@@ -18,6 +19,12 @@ public abstract class Operacion extends Expresion {
 
 	public Expresion getOperando2() {
 		return operando2;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "("+this.operando1+this.getOperador()+this.operando2+")";
 	}
 	
 	

@@ -8,7 +8,11 @@ public class Multiplicar extends Operacion {
 
 	@Override
 	public int operar() {
-		return this.getOperando1().operar()*this.getOperando2().operar();
+		return this.getOperando1().operar() * this.getOperando2().operar();
 	}
 
+	@Override
+	public String getOperador() {
+		return "*";
+	}
 }
