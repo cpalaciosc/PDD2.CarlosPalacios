@@ -41,5 +41,11 @@ public class NaturalNumberTest {
 		this.naturalNumber = new NaturalNumberEn(2);
 		assertEquals("two", this.naturalNumber.getTextValue());
 	}
+	
+	@Test
+	public void testUnknownValue() {
+		this.naturalNumber = new NaturalNumberEn(52);
+		assertEquals("???", this.naturalNumber.getTextValue());
+	}
 
 }
