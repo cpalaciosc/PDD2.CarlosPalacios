@@ -1,13 +1,15 @@
 package es.upm.miw.pd.command.calculator;
 
 import es.upm.miw.pd.command.calculator.memento.CalculadoraMementable;
+import es.upm.miw.pd.command.calculator.memento.GestorMementos;
 import upm.jbb.IO;
 
-public class ComandoDeshacer extends SuperComando {
+public class ComandoDeshacer extends ComandoMementable {
 	private final static String COMANDO = "Deshacer";
 
-	public ComandoDeshacer(CalculadoraMementable calculadora) {
-		super(calculadora);
+	public ComandoDeshacer(CalculadoraMementable originador,
+			GestorMementos<Calculadora> gm) {
+		super(originador, gm);
 	}
 
 	@Override
@@ -17,11 +19,10 @@ public class ComandoDeshacer extends SuperComando {
 
 	@Override
 	public void execute() {
-		Calculadora calculadoraRestore = MainCalculadora.getGestorMementos()
+		Calculadora calculadoraRestore = this.getGestorMementos()
 				.getMemento(
-						(String) IO.in.select(MainCalculadora
+						(String) IO.in.select(this
 								.getGestorMementos().keys(), "Restaurar"));
-		IO.out.println("Calc restore " + calculadoraRestore.getTotal());
 		this.getOriginador().restoreMemento(calculadoraRestore);
 	}
 
