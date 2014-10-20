@@ -16,6 +16,8 @@ public abstract class Componente {
 	public abstract void aniadirTexto(Componente componente);
 
 	public abstract void quitarTexto(Componente componente);
+	
+	public abstract String imprimir();
 
 	public abstract String imprimir(boolean mayusculas);
 

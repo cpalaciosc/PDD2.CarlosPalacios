@@ -42,6 +42,12 @@ public class Caracter extends Componente {
 	}
 
 	@Override
+	public String imprimir() {
+		return this.caracter;
+
+	}
+
+	@Override
 	public String imprimir(boolean mayusculas) {
 		return mayusculas ? this.caracter.toUpperCase() : this.caracter
 				.toLowerCase();
