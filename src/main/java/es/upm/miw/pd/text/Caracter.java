@@ -23,7 +23,7 @@ public class Caracter extends Componente {
 
 	@Override
 	public String dibujar(boolean mayusculas) {
-		return mayusculas ? this.caracter.toUpperCase() : this.caracter;
+		return mayusculas ? this.caracter.toUpperCase() : this.dibujar();
 
 	}
 
