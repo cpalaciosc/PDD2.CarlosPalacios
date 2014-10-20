@@ -18,19 +18,19 @@ public abstract class Contenido extends Componente {
 	public abstract String getFinContenido();
 	
 	@Override
-	public String imprimir() {
+	public String dibujar() {
 		String txt = "";
 		for (Componente caracter : this.getContenido()) {
-			txt += caracter.imprimir();
+			txt += caracter.dibujar();
 		}
 		return txt + this.getFinContenido();
 	}
 	
 	@Override
-	public String imprimir(boolean mayusculas) {
+	public String dibujar(boolean mayusculas) {
 		String txt = "";
 		for (Componente caracter : this.getContenido()) {
-			txt += caracter.imprimir(mayusculas);
+			txt += caracter.dibujar(mayusculas);
 		}
 		return txt + this.getFinContenido();
 	}

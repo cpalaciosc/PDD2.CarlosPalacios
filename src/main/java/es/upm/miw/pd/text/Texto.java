@@ -6,46 +6,16 @@ public class Texto extends Contenido {
 	}
 
 	@Override
-	public void aniadirCaracter(Componente componente) {
-		throw new UnsupportedOperationException();
-		
+	public String getFinContenido() {
+		return "---o---\n";
 	}
 
 	@Override
-	public void quitarCaracter(Componente componente) {
-		this.getContenido().remove(componente);
-		
+	public void add(Componente c) {
+		if (c.getClass() == Caracter.class) {
+			throw new UnsupportedOperationException();
+		}
+		this.getContenido().add(c);
 	}
-
-	@Override
-	public void aniadirParrafo(Componente componente) {
-		this.getContenido().add(componente);
-	}
-
-	@Override
-	public void quitarParrafo(Componente componente) {
-		this.getContenido().remove(componente);
-		
-	}
-
-	@Override
-	public void aniadirTexto(Componente componente) {
-		this.getContenido().add(componente);
-	}
-
-	@Override
-	public void quitarTexto(Componente componente) {
-		this.getContenido().remove(componente);
-		
-	}
-	
-	@Override
-	public String getFinContenido(){
-		return "---o---";
-	}
-
-
-
-
 
 }

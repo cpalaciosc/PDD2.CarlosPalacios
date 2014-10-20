@@ -16,42 +16,19 @@ public class Caracter extends Componente {
 	}
 
 	@Override
-	public void aniadirCaracter(Componente componente) {
-	}
-
-	@Override
-	public void quitarCaracter(Componente componente) {
-
-	}
-
-	@Override
-	public void aniadirParrafo(Componente componente) {
-	}
-
-	@Override
-	public void quitarParrafo(Componente componente) {
-	}
-
-	@Override
-	public void aniadirTexto(Componente componente) {
-
-	}
-
-	@Override
-	public void quitarTexto(Componente componente) {
-	}
-
-	@Override
-	public String imprimir() {
+	public String dibujar() {
 		return this.caracter;
 
 	}
 
 	@Override
-	public String imprimir(boolean mayusculas) {
-		return mayusculas ? this.caracter.toUpperCase() : this.caracter
-				.toLowerCase();
+	public String dibujar(boolean mayusculas) {
+		return mayusculas ? this.caracter.toUpperCase() : this.caracter;
 
+	}
+
+	@Override
+	public void add(Componente c) {
 	}
 
 }

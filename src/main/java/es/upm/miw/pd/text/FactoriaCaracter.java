@@ -14,14 +14,14 @@ public class FactoriaCaracter {
 		map = new TreeMap<String, Caracter>();
 	}
 
-	public static FactoriaCaracter getInstance() {
+	public static FactoriaCaracter getFactoria() {
 		if (factoria == null) {
 			factoria = new FactoriaCaracter();
 		}
 		return factoria;
 	}
 
-	public Caracter getCaracter(char key) {
+	public Caracter get(char key) {
 		if (!this.map.containsKey(String.valueOf(key))) {
 			Caracter value = new Caracter(key);
 			this.map.put(String.valueOf(key), value);
